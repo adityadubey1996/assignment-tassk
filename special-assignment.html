@@ -1,0 +1,114 @@
+<html>
+    <head>
+
+    </head>
+<style>
+    #slideshow1{
+  display: block;
+  
+}
+#slideshow2{
+  display: none;
+}
+#slideshow3{
+display: none;
+
+}
+
+@keyframes slideshow{
+
+  0%{
+    translate:-100px ;
+    opacity: 0;
+  }
+  50%{
+    translate:100px ;
+    
+    opacity: 1;
+  }
+  
+  100%{
+    translate:-100px ;
+    opacity: 0;
+    height: 0;
+  }
+
+}
+</style>
+    <body>
+        <div class="col-lg-6" id="slideshow1" style="display: block;" >
+						
+            <h1>SATISFYING YOUR HEALTHCARE NEEDS</h1>
+            <p>By providing the serivce with the quality first approach</p>
+            <a class="main_btn mr-10" href="#">get started</a>
+        
+        </div>
+        <div class="col-lg-6" id='slideshow2'style="display: none;">
+            <h1>We Care for Your Health Every Moment</h1>
+            <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price You may see some
+                for as low as each.</p>
+            <a class="main_btn mr-10" href="#" >get started</a>
+            
+        </div>
+        <div class="col-lg-6" id='slideshow3'style="display: none;">
+            <h1>We Ct</h1>
+            <p>If you ab, you may be very confused at the difference in price You may see some
+                for as low as each.</p>
+            <a class="main_btn mr-10" href="#">get started</a>
+            
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+<script>
+    var slide1 = document.getElementById('slideshow1')
+    var slide2 = document.getElementById('slideshow2')
+    var slide3 = document.getElementById('slideshow3')
+    for(var i = 0; i < 100; i++){
+(function(i){
+    setTimeout(function(){
+        slideshow12();
+    }, 3000*(i+1));
+})(i);
+}
+
+    
+    function slideshow12(){  
+        
+        
+    if(slide1.style.display == 'block'){
+       
+        slide1.style.display = 'none'
+        slide1.style.animation = ''
+        slide3.style.display = 'none'
+        slide2.style.display = 'block'
+        
+        slide2.style.animation = 'slideshow 3s'
+        
+    }
+    else if(slide2.style.display == 'block'){
+      
+        slide2.style.display = 'none'
+        slide2.style.animation = ''
+        slide1.style.display = 'none'
+        slide3.style.display = 'block'
+        
+        slide3.style.animation = 'slideshow 3s'
+    }
+    else if(slide3.style.display == 'block'){
+       
+        slide3.style.display = 'none'
+        slide3.style.animation = ''
+        slide2.style.display = 'none'
+        slide1.style.display = 'block'
+        
+        slide1.style.animation = 'slideshow 3s'
+    }
+}
+
+</script>
